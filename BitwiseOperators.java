@@ -16,3 +16,11 @@ public class BitwiseOperators {
 // 33 33 34 35 35 in java
 
 // 36 34 36 36 32 in c
+
+// Bitwise for the following
+// 15 -> 1111
+// 25 -> 11001
+// 31 -> 11111
+// 14 -> 1110
+// 28 -> 11100
+// 34 -> 100010
