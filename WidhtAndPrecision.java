@@ -1,5 +1,5 @@
 import java.util.Scanner;
-// Assignment 1 to find output and leading spaces
+//Width and precision concept
 
 public class WidhtAndPrecision {
     public static void main(String[] args) {
