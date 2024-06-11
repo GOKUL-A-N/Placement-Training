@@ -50,4 +50,22 @@ public class ConditionalStatements {
         //     System.out.println("Not Leap Year");
         // }
     }
+
+    // can be used only in c
+    //switch statement to set ranges
+    // static void switchStatement(int num){
+    //     switch (num) {
+    //         case 0 ... 9:
+    //             System.out.println("Ones");
+    //             break;
+    //         case 10 ... 99:
+    //             System.out.println("tens");
+    //             break;
+    //         case 100 ... 999:
+    //             System.out.println("Hundreds");
+    //             break;
+    //         default:
+    //             break;
+    //     }
+    // }
 }
