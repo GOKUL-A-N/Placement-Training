@@ -47,48 +47,59 @@ public class ConditionalStatements {
         }
         // short cut method for leap year program
         // if(year % 4 == 0 && ( year % 100 != 0 || year % 400 == 0)) {
-        //     System.out.println("Leap Year");
+        // System.out.println("Leap Year");
         // } else {
-        //     System.out.println("Not Leap Year");
+        // System.out.println("Not Leap Year");
         // }
     }
 
     // can be used only in c
-    //switch statement to set ranges
+    // switch statement to set ranges
     // static void switchStatement(int num){
-    //     switch (num) {
-    //         case 0 ... 9:
-    //             System.out.println("Ones");
-    //             break;
-    //         case 10 ... 99:
-    //             System.out.println("tens");
-    //             break;
-    //         case 100 ... 999:
-    //             System.out.println("Hundreds");
-    //             break;
-    //         default:
-    //             break;
-    //     }
+    // switch (num) {
+    // case 0 ... 9:
+    // System.out.println("Ones");
+    // break;
+    // case 10 ... 99:
+    // System.out.println("tens");
+    // break;
+    // case 100 ... 999:
+    // System.out.println("Hundreds");
+    // break;
+    // default:
+    // break;
+    // }
     // }
 
-
-    static void noOfDaysRemaining(int date , int month , int year){
+    static void noOfDaysRemaining(int date, int month, int year) {
         int days = 0;
-        switch(month) {
-            case 1: days += 31;
-            case 2: days += (leapYear(year)) ? 29: 28;
-            case 3: days += 31;
-            case 4: days += 30;
-            case 5: days += 31;
-            case 6: days += 30;
-            case 7: days += 31;
-            case 8: days += 31;
-            case 9: days += 30;
-            case 10: days += 31;
-            case 11: days += 30;
-            case 12: days += 31;
+        switch (month) {
+            case 1:
+                days += 31;
+            case 2:
+                days += (leapYear(year)) ? 29 : 28;
+            case 3:
+                days += 31;
+            case 4:
+                days += 30;
+            case 5:
+                days += 31;
+            case 6:
+                days += 30;
+            case 7:
+                days += 31;
+            case 8:
+                days += 31;
+            case 9:
+                days += 30;
+            case 10:
+                days += 31;
+            case 11:
+                days += 30;
+            case 12:
+                days += 31;
         }
         days -= date;
         System.out.println(days);
-    }   
+    }
 }
