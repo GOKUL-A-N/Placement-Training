@@ -4,10 +4,13 @@ public class LoopingStatement {
         // while loop -> entry loop 
         // for loop -> entry loop
         // do while loop -> exit loop
-        productPrimeFactor(100);
+        // productPrimeFactor(100);
         // perfectSquare(24);
-        amicable(220,284);
-        betrothed(75, 48);
+        // amicable(220,284);
+        // betrothed(75, 48);
+        // System.out.println(powerOfTwo(32));
+        // fibonacci(5);
+        prime(25);
     }   
 
 
@@ -67,6 +70,51 @@ public class LoopingStatement {
     static void betrothed(int num1, int num2){
         System.out.println((sumOfFactors(num1)-1 == num2) && (sumOfFactors(num2)-1 ==num1));
     }
+
+    // check power of two
+    static boolean powerOfTwo(int num){
+        while(num != 1){
+            if(num % 2 == 0) num = num / 2;
+            else return false;
+        }
+        return true;
+    }
+
+    static void fibonacci(int num){
+        int num1 = 1;
+        int num2 = 1;
+        System.out.println(num1 );
+        System.out.println(num2);
+        for(int i = 2; i < num;i++){
+            int num3 = num1+num2;
+            num1 = num2;
+            num2 = num3;
+            System.out.println(num3);
+        }
+    }
+
+
+    // prime number or not
+    static void prime(int num){
+        if(num % 2 != 0 || num == 2 || num == 3 || num % 6 ==1 || num % 6 == 5){
+        int fact , range;
+        range = (int)Math.sqrt(num);
+        for(fact = 3; fact <= range; fact+=2){
+            if(num % fact == 0){
+                break;
+            }
+        }
+        if(fact > range){
+            System.out.print("prime");
+        }else System.out.println("Not prime");
+    }
+    }
+
+    // algorithms for  finding prime numbers
+    // sieve of eratosthenes (method using array to set all not prime numbers to falsee by iterating the index and setting it to false)
+    // sieve of sundaram
+    // sieve of atkin
+
 }
 
 
