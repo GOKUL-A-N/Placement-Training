@@ -1,5 +1,4 @@
 
-
 public class DigitManipulation {
 
     // finding even numbers from a given number
@@ -27,7 +26,9 @@ public class DigitManipulation {
         // adam(10);
         magic(1729);
     }
+    // 6829
 
+    // for extraction formula : (digit / pv) % 10
     // segregation of odd and even numbers from a given number
     static void Segregation(int num) {
         int even = 0, odd = 0, opv = 1;
@@ -47,7 +48,7 @@ public class DigitManipulation {
 
     // alternate digit swap
     static void digitSwap(int num) {
-        int count = 0, pv = 1, safe = 0,res = 0;
+        int count = 0, pv = 1, safe = 0, res = 0;
         while (num / pv != 0) {
             count++;
             pv = pv * 10;
@@ -57,95 +58,106 @@ public class DigitManipulation {
             num = num / 10;
         }
         pv = 1;
-        while(num != 0){
+        while (num != 0) {
             int pair = num % 100;
             int swap = (pair % 10) * 10 + pair / 10;
             res = swap * pv + res;
             pv = pv * 100;
-            num = num /100;
+            num = num / 100;
         }
-        if(safe != 0 ) System.out.println(res * 10 + safe);
-        else System.out.println(res);
+        if (safe != 0)
+            System.out.println(res * 10 + safe);
+        else
+            System.out.println(res);
     }
 
-    static int sumOfDigits(int num){
+    static int sumOfDigits(int num) {
         int res = 0;
-        while(num != 0) {
+        while (num != 0) {
             res = res + num % 10;
             num = num / 10;
         }
         return res;
     }
+
     // harshad number problem
-    static void harshadNumber(int num){
-        if(num % sumOfDigits(num) == 0) System.out.println("Harshad number");
-        else System.out.println("Not a Harshad Number");
+    static void harshadNumber(int num) {
+        if (num % sumOfDigits(num) == 0)
+            System.out.println("Harshad number");
+        else
+            System.out.println("Not a Harshad Number");
     }
 
-    static int factorial(int num){
-        if(num <= 0) return 0;
-        if(num == 1) return 1;
-        return num * factorial(num-1);
+    static int factorial(int num) {
+        if (num <= 0)
+            return 0;
+        if (num == 1)
+            return 1;
+        return num * factorial(num - 1);
     }
+
     // strong number problem
-    static void strongNumber(int num){
-        int res  = 0;
+    static void strongNumber(int num) {
+        int res = 0;
         int safe = num;
-        while(num != 0) {
+        while (num != 0) {
             res += factorial(num % 10);
             num = num / 10;
         }
-        if(res == safe) System.out.println("Strong number");
-        else System.out.println("Not a strong number");
+        if (res == safe)
+            System.out.println("Strong number");
+        else
+            System.out.println("Not a strong number");
     }
 
-    //armstrong Number or not
-    static void armstrong(int num){
+    // armstrong Number or not
+    static void armstrong(int num) {
         int safe = num;
         int count = 0;
         int res = 0;
-        while(num != 0){
+        while (num != 0) {
             count++;
-            num = num/10;
+            num = num / 10;
         }
         num = safe;
-        while(num != 0){
-            res += (int)Math.pow(num%10, count);
+        while (num != 0) {
+            res += (int) Math.pow(num % 10, count);
             num /= 10;
         }
-        if(res == safe) System.out.println("Armstrong number");
-        else System.out.println("Not an armstrong number");
+        if (res == safe)
+            System.out.println("Armstrong number");
+        else
+            System.out.println("Not an armstrong number");
     }
 
-    static int reversed(int num){
+    static int reversed(int num) {
         int res = 0;
-        while(num != 0){
-            res = (res * 10) + (num%10);
-            num /= 10; 
+        while (num != 0) {
+            res = (res * 10) + (num % 10);
+            num /= 10;
         }
         return res;
     }
 
     // adam number
-    static void adam(int num){
+    static void adam(int num) {
         int num1 = num;
         int num2 = reversed(num1);
-        if(num1 * num1 == reversed(num2 * num2)){
+        if (num1 * num1 == reversed(num2 * num2)) {
             System.out.println("Adam Number");
-        }else{
+        } else {
             System.out.println("Not an Adam Number");
         }
     }
 
     // magic number
-    static void magic(int num){
+    static void magic(int num) {
         int sum = sumOfDigits(num);
         int res = reversed(sum);
-        if(sum * res == num) System.out.println("Magic Number");
-        else System.out.println("Not a magic Number"); 
+        if (sum * res == num)
+            System.out.println("Magic Number");
+        else
+            System.out.println("Not a magic Number");
     }
 
 }
-// 6829
-
-// for extraction formula : (digit / pv) % 10
