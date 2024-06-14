@@ -23,7 +23,9 @@ public class DigitManipulation {
         // digitSwap(514536);
         // harshadNumber(12);
         // strongNumber(145);
-        armstrong(143);
+        // armstrong(143);
+        // adam(10);
+        magic(1729);
     }
 
     // segregation of odd and even numbers from a given number
@@ -114,6 +116,35 @@ public class DigitManipulation {
         if(res == safe) System.out.println("Armstrong number");
         else System.out.println("Not an armstrong number");
     }
+
+    static int reversed(int num){
+        int res = 0;
+        while(num != 0){
+            res = (res * 10) + (num%10);
+            num /= 10; 
+        }
+        return res;
+    }
+
+    // adam number
+    static void adam(int num){
+        int num1 = num;
+        int num2 = reversed(num1);
+        if(num1 * num1 == reversed(num2 * num2)){
+            System.out.println("Adam Number");
+        }else{
+            System.out.println("Not an Adam Number");
+        }
+    }
+
+    // magic number
+    static void magic(int num){
+        int sum = sumOfDigits(num);
+        int res = reversed(sum);
+        if(sum * res == num) System.out.println("Magic Number");
+        else System.out.println("Not a magic Number"); 
+    }
+
 }
 // 6829
 
