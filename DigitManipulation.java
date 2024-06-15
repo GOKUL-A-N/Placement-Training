@@ -24,7 +24,16 @@ public class DigitManipulation {
         // strongNumber(145);
         // armstrong(143);
         // adam(10);
-        magic(1729);
+        // magic(1729);
+        // baseConversion(11001, 10);
+        // gcd(12, 24);
+        // lcm(36, 24);
+        // minCombPseudoBinary(55);
+        // validanagram(987654321, 9874561230);
+        // panNumber(246, 789);
+        // endStar(5);
+        // pyramidStar(5);
+        endAboveStar(5);
     }
     // 6829
 
@@ -160,4 +169,168 @@ public class DigitManipulation {
             System.out.println("Not a magic Number");
     }
 
+    // base conversion
+    static void baseConversion(int num, int base) {
+        int res = 0, pv = 1;
+        if (num > base) {
+            while (num > 0) {
+                res = (num % base) * pv + res;
+                num /= base;
+                pv = pv * (2);
+            }
+            System.out.println(res);
+        }
+    }
+
+    // greatest common divisor
+    static int gcd(int num1, int num2) {
+        // method 1 ( Euclid's method)
+        while (num2 > 0) {
+            int rem = num1 % num2;
+            num1 = num2;
+            num2 = rem;
+        }
+        System.out.println(num1);
+        return num1;
+        // method 2
+        // int val = Math.min(num1, num2);
+        // while (val != 0) {
+        // if (num2 % val == 0 && num1 % val == 0) {
+        // System.out.println(val);
+        // break;
+        // } else {
+        // val = val - 1;
+        // }
+        // }
+        // if (val == 0)
+        // System.out.println("No common factor");
+    }
+
+    // lcm
+    static void lcm(int num1, int num2) {
+        System.out.println((num1 * num2) / gcd(num1, num2));
+    }
+
+    // given an integer represent the number as a sum of minimum possible
+    // combination only with pseudobinary numbers
+    static void minCombPseudoBinary(int num) {
+        while (num != 0) {
+            int rem = 0;
+            int pv = 1;
+            while (num / pv != 0) {
+                if ((num / pv) % 10 > 0)
+                    rem = 1 * pv + rem;
+                else
+                    rem = 0 * pv + rem;
+                pv *= 10;
+            }
+            num = num - rem;
+            if (num != 0)
+                System.out.print(rem + " + ");
+            else
+                System.out.print(rem);
+        }
+    }
+
+    // valid anagram
+    static void validanagram(long num1, long num2) {
+        // method 1
+        long res1 = 0, res2 = 0;
+        while (num1 != 0) {
+            long rem = num1 % 10;
+            res1 += rem * 10 ^ rem;
+            num1 /= 10;
+        }
+        while (num2 != 0) {
+            long rem = num2 % 10;
+            res2 += rem * 10 ^ rem;
+            num2 /= 10;
+        }
+        if (res1 == res2)
+            System.out.println("Yes");
+        else
+            System.out.println("No");
+        // // method 2
+        // int res[] = new int[10];
+        // int flag = 0;
+        // for(int pv = 1;num1/pv > 0 && num2/pv > 0;pv *= 10){
+        // res[(num1/pv) % 10]++;
+        // res[(num2/pv) % 10]--;
+        // }
+        // for(int num: res){
+        // if(num != 0) {System.out.println("No"); flag=1;break;}
+        // }
+        // if(flag == 0) System.out.println("Yes");
+    }
+
+    static void panNumber(int num1, int num2) {
+        int num3 = num1 + num2;
+        int res = 0;
+        while (num1 != 0 || num2 != 0 || num3 != 0) {
+            if (num1 > 0)
+                res += (num1 % 10) * 10 ^ (num1 % 10);
+            if (num2 > 0)
+                res += (num2 % 10) * 10 ^ (num2 % 10);
+            if (num3 > 0)
+                res += (num3 % 10) * 10 ^ (num3 % 10);
+            if (num1 > 0)
+                num1 /= 10;
+            if (num2 > 0)
+                num2 /= 10;
+            if (num3 > 0)
+                num3 /= 10;
+        }
+        int count = 0;
+        int flag = 1;
+        while (res != 0) {
+            if (res % 10 != 0 || res % 10 != count) {
+                flag = 0;
+                System.out.println("False");
+                break;
+            }
+            count++;
+            res /= 10;
+        }
+        if (flag == 1) {
+            System.out.println("True");
+        }
+    }
+    static void endStar(int row){
+        for(int i=1;i<=row;i++){
+            for(int col = 1;col<=row;col++){
+                if(col <= row-i){
+                    System.out.print(" "+" ");
+                }
+                else System.out.print("*"+" ");
+            }
+            // for(int col = row-i+1;col<=row;col++){
+                
+            // }
+            System.out.println();
+        }
+    }
+
+    static void pyramidStar(int row){
+        for(int i=1;i<=row;i++){
+            for(int col = 1;col<=(row)-i;col++){
+                System.out.print(" "+ "");
+            }
+            for(int j = 0;j<i;j++){
+                System.out.print("*" + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    static void endAboveStar(int row){
+        for(int i=1;i<=row;i++){
+            for(int j=1;j<=row;j++){
+                if(j<i){
+                    System.out.print(" "+" ");
+                }
+                else System.out.print("*"+" ");
+            }
+            System.out.println();
+        }
+    }
 }
