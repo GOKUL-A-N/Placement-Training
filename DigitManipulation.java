@@ -30,8 +30,8 @@ public class DigitManipulation {
         // lcm(36, 24);
         // minCombPseudoBinary(55);
         // validanagram(987654321, 9874561230);
-        // panNumber(246, 789);
-        
+        panNumber(246, 789);
+
     }
     // 6829
 
@@ -263,35 +263,26 @@ public class DigitManipulation {
 
     static void panNumber(int num1, int num2) {
         int num3 = num1 + num2;
-        int res = 0;
+        long res = 0;
         while (num1 != 0 || num2 != 0 || num3 != 0) {
-            if (num1 > 0)
-                res += (num1 % 10) * 10 ^ (num1 % 10);
-            if (num2 > 0)
-                res += (num2 % 10) * 10 ^ (num2 % 10);
-            if (num3 > 0)
-                res += (num3 % 10) * 10 ^ (num3 % 10);
-            if (num1 > 0)
+            if (num1 > 0) {
+                res += (num1 % 10) * Math.pow(10,num1%10);
                 num1 /= 10;
-            if (num2 > 0)
-                num2 /= 10;
-            if (num3 > 0)
-                num3 /= 10;
-        }
-        int count = 0;
-        int flag = 1;
-        while (res != 0) {
-            if (res % 10 != 0 || res % 10 != count) {
-                flag = 0;
-                System.out.println("False");
-                break;
             }
-            count++;
-            res /= 10;
+            if (num2 > 0) {
+                res += (num2 % 10) * Math.pow(10,num2%10);
+                num2 /= 10;
+            }
+            if (num3 > 0) {
+                res += (num3 % 10) * Math.pow(10,num3%10);
+                num3 /= 10;
+            }
         }
-        if (flag == 1) {
+        if (res == 9876543210l) {
             System.out.println("True");
+        } else {
+            System.out.println("False");
         }
     }
-    
+
 }
