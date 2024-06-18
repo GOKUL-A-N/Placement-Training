@@ -31,9 +31,7 @@ public class DigitManipulation {
         // minCombPseudoBinary(55);
         // validanagram(987654321, 9874561230);
         // panNumber(246, 789);
-        // endStar(5);
-        // pyramidStar(5);
-        endAboveStar(5);
+        
     }
     // 6829
 
@@ -295,42 +293,5 @@ public class DigitManipulation {
             System.out.println("True");
         }
     }
-    static void endStar(int row){
-        for(int i=1;i<=row;i++){
-            for(int col = 1;col<=row;col++){
-                if(col <= row-i){
-                    System.out.print(" "+" ");
-                }
-                else System.out.print("*"+" ");
-            }
-            // for(int col = row-i+1;col<=row;col++){
-                
-            // }
-            System.out.println();
-        }
-    }
-
-    static void pyramidStar(int row){
-        for(int i=1;i<=row;i++){
-            for(int col = 1;col<=(row)-i;col++){
-                System.out.print(" "+ "");
-            }
-            for(int j = 0;j<i;j++){
-                System.out.print("*" + " ");
-            }
-            System.out.println();
-        }
-    }
-
-    static void endAboveStar(int row){
-        for(int i=1;i<=row;i++){
-            for(int j=1;j<=row;j++){
-                if(j<i){
-                    System.out.print(" "+" ");
-                }
-                else System.out.print("*"+" ");
-            }
-            System.out.println();
-        }
-    }
+    
 }
