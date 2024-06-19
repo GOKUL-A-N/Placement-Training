@@ -32,9 +32,6 @@ public class Pattern {
                 } else
                     System.out.print("*" + " ");
             }
-            // for(int col = row-i+1;col<=row;col++){
-
-            // }
             System.out.println();
         }
     }
