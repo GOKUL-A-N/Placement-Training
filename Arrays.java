@@ -119,8 +119,8 @@ public class Arrays {
             }
             arr[ind] = safe;
         }
+
         for (int num : arr)
             System.out.print(num + " ");
-
     }
 }
