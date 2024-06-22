@@ -174,7 +174,7 @@ public class DigitManipulation {
             while (num > 0) {
                 res = (num % base) * pv + res;
                 num /= base;
-                pv = pv * (2);
+                pv = pv * (10);
             }
             System.out.println(res);
         }

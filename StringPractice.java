@@ -108,7 +108,7 @@ public class StringPractice {
     }
 
     static void nextLargestWithNumber(int num){
-        int left = 0 , right = num % 10 , pv = 10 , pos2 = 1,pos1 = num % 10;
+        int left = 0 , right = num % 10 , pv = 10 , pos2 = 1,pos1 = 1;
         while(num/pv != 0){
             left = (num / pv ) % 10;
             pos2++;
@@ -118,16 +118,20 @@ public class StringPractice {
             right = left;
             pv *= 10;
         }
+        
         pv = 1;
         while(pos1<pos2){
-            pos1++;
+            
             right = (num / pv ) % 10;
-            if(right < left){
+            
+            if(right > left){
                 break;
             }
+            pos1++;
             pv *= 10;
         }
-        num = reverseParticularIndexValues(num, pos2, pos1+1);
+        System.out.println(pos1);
+        num = reverseParticularIndexValues(num, pos2, pos1);
         num = reverseIndexesfromarange(num, pos2-1);
         System.out.println(num);
     }
