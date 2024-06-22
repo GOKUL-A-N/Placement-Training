@@ -84,17 +84,17 @@ public class StringPractice {
         // return arr;
     }
 
-    static void reverseParticularIndexValues(int num, int pos1, int pos2) {
-        int pv1 = (int) Math.pow(10, pos1 - 1);
-        int pv2 = (int) Math.pow(10, pos2 - 1);
+    static int reverseParticularIndexValues(int num, int pos1, int pos2) {
+        int pv1 = (int) Math.pow(10, pos1-1);
+        int pv2 = (int) Math.pow(10, pos2-1);
         int dig1 = (num / pv1) % 10;
         int dig2 = (num / pv2) % 10;
         num = num - (dig1 * pv1) - (dig2 * pv2);
         num = num + (dig2 * pv1) + (dig1 * pv2);
-        System.out.println(num);
+        return num;
     }
 
-    static void reverseIndexesfromarange(int num, int pos) {
+    static int reverseIndexesfromarange(int num, int pos) {
         int pv = (int) Math.pow(10, pos);
         int dig, res = 0;
         int last = num % pv;
@@ -104,11 +104,11 @@ public class StringPractice {
             last /= 10;
         }
         num = (num / pv) * pv + res;
-        System.out.println(num);
+        return num;
     }
 
     static void nextLargestWithNumber(int num){
-        int left = 0 , right = num % 10 , pv = 10 , pos2 = 1;
+        int left = 0 , right = num % 10 , pv = 10 , pos2 = 1,pos1 = num % 10;
         while(num/pv != 0){
             left = (num / pv ) % 10;
             pos2++;
@@ -118,6 +118,17 @@ public class StringPractice {
             right = left;
             pv *= 10;
         }
-        System.out.print(pos2);
+        pv = 1;
+        while(pos1<pos2){
+            pos1++;
+            right = (num / pv ) % 10;
+            if(right < left){
+                break;
+            }
+            pv *= 10;
+        }
+        num = reverseParticularIndexValues(num, pos2, pos1+1);
+        num = reverseIndexesfromarange(num, pos2-1);
+        System.out.println(num);
     }
 }
