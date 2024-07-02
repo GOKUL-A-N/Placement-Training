@@ -1,0 +1,58 @@
+body {
+    background-image: url("https://cdn.vectorstock.com/i/500p/15/71/abstract-3d-luxury-black-color-wave-lines-vector-43391571.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: aliceblue;
+    /* position: relative; */
+  }
+  .mark{
+    background: transparent;
+    color: antiquewhite;
+    text-align: center;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: rgb(255, 255, 255);
+  }
+
+  .main{
+    margin: 30px 20px 30px 20px;
+    /* float: right; */
+    /* margin-top: 400px; */
+  }
+
+  table,tr,th,td{
+    padding: 20px;
+  }
+
+  nav{
+    display: flex;
+    position: sticky;
+    width: 100%;
+    padding: 30px;
+  }
+  nav ul{
+    /* display: inline-block; */
+      float: right;
+  list-style-type: none;
+  width: 100%;
+
+  }
+  nav h6{
+    padding: 5px;
+    font-size: 32px;
+    font-weight: bolder;
+  }
+  nav ul a li{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    float:right;
+    padding: 10px;
+    font-weight: bolder;
+  }
