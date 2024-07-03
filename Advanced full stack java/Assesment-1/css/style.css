@@ -2,7 +2,20 @@
 
 body{
     font-family: "Roboto", sans-serif;
+    scrollbar-color: rgb(218, 218, 218) rgb(0, 0, 0);
+    scrollbar-width: thin;
 }
+
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #5c5c5c;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+  }
 
 .btn{
     color: #fff;
