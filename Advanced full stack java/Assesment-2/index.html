@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bike Website</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <ul
+      class="nav justify-content-center bg-blue-900 text-white p-4 text-[25px] fixed w-full"
+    >
+      <li class="nav-item">
+        <a
+          class="nav-link text-white hover:text-yellow"
+          aria-current="page"
+          href="#"
+          >Home</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white hover:text-yellow" href="#">AboutUs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white hover:text-yellow" href="#">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white hover:text-yellow">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white hover:text-yellow">ContactUs</a>
+      </li>
+    </ul>
+    <!-- home section -->
+    <div class="w-full h-screen home-background"></div>
+    <!-- About section -->
+     <br>
+    <h1 class="text-[29px] text-center w-full font-bold">About Us</h1>
+    <section class="w-full h-screen flex flex-col md:flex-row">
+        
+      <div class="w-full md:w-1/2 flex items-center justify-center">
+        <p class="text-[14px] md:text-[25px] font-semibold p-8 md:p-20">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quae
+          debitis enim ab possimus est ipsa voluptate minima, reiciendis natus
+          adipisci sequi molestias architecto tempore assumenda id officia? Quas
+          deleniti soluta facilis quos recusandae autem temporibus vitae? Ex
+          harum libero voluptates quis, accusantium mollitia quibusdam
+          recusandae, cupiditate veritatis aperiam voluptate!
+        </p>
+      </div>
+      <div class="w-full md:w-1/2 flex items-center justify-center">
+        <img src="./images/hero-img.jpg" class="w-2/3 h-2/3" alt="">
+      </div>
+    </section>
+    <!-- service section -->
+    <section class="h-screen w-full">
+        <h1 class="text-[29px] text-center w-full font-bold">Services</h1>
+      <div class="w-full p-5 flex justify-around items-center">
+        <div class="w-1/4 h-[300px] cursor-pointer">
+            <img src="./images/service-1.png" class="w-full h-full" alt="">
+        </div>
+        <div class="w-1/4 h-[300px] cursor-pointer">
+            <img src="./images/service-2.png" class="w-full h-full" alt="">
+        </div>
+        <div class="w-1/4 h-[300px] cursor-pointer">
+            <img src="./images/service-3.png" class="w-full h-full" alt="">
+        </div>
+      </div>
+      <button class="text-[28px] underline text-center w-full"> Click Here for more Services</button>
+    </section>
+    <!-- product section -->
+    <section class=" w-full bg-gray-500">
+        <h1 class="text-[29px] text-center w-full font-bold">Products</h1>
+      <div class="w-full p-5 flex flex-wrap gap-5 justify-around items-center">
+        <div class="w-1/4 h-[300px] cursor-pointer">
+            <img src="./images/product-1.png" class="w-full h-full" alt="">
+            <h6 class="text-[29px] text-center w-full font-bold">wheel</h6>
+        </div>
+        <div class="w-1/4 h-[300px] cursor-pointer">
+            <img src="./images/product-2.png" class="w-full h-full" alt="">
+            <h6 class="text-[29px] text-center w-full font-bold">HeadLight</h6>
+        </div>
+        <div class="w-1/4 h-[300px] cursor-pointer">
+            <img src="./images/product-3.png" class="w-full h-full" alt="">
+            <h6 class="text-[29px] text-center w-full font-bold">Seat</h6>
+        </div>
+        <div class="w-1/4 h-[300px] cursor-pointer">
+            <img src="./images/product-4.png" class="w-full h-full" alt="">
+            <h6 class="text-[29px] text-center w-full font-bold">Sppedometer</h6>
+        </div>
+      </div>
+    </section>
+    <!-- contact section -->
+     <section class="w-full flex flex-col items-center justify-around">
+        <h1 class="text-[29px] text-center w-full font-bold">Contact Us</h1><br>
+        <form class="w-2/5">
+            
+            <div class="form-group row w-contain">
+              <label for="inputPassword" class="col-sm-2 col-form-label  border-0 font-semibold text-black">First Name</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control border-1 border-black" id="inputPassword" placeholder="">
+              </div>
+            </div><br>
+            <div class="form-group row w-contain">
+                <label for="inputPassword" class="col-sm-2 col-form-label border-0 font-semibold text-black">Last Name</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control border-1 border-black" id="inputPassword" placeholder="">
+                </div>
+              </div><br>
+              <div class="form-group row w-contain">
+                <label for="inputPassword" class="col-sm-2 col-form-label border-0 font-semibold text-black">City</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control border-1 border-black" id="inputPassword" placeholder="">
+                </div>
+              </div><br>
+              <div class="form-group row w-contain">
+                <label for="inputPassword" class="col-sm-2 col-form-label border-0 font-semibold text-black">Address</label>
+                <div class="col-sm-10">
+                  <textarea type="text" class="form-control border-1 border-black" id="inputPassword" placeholder=""></textarea>
+                </div>
+              </div><br>
+              <div class="form-group row w-contain">
+                <label for="inputPassword" class="col-sm-2 col-form-label border-0 font-semibold text-black">Requirements</label>
+                <div class="col-sm-10">
+                  <textarea type="text" class="form-control border-1 border-black" id="inputPassword" placeholder=""></textarea>
+                </div>
+              </div><br>
+              <div class="w-full items-center justify-center"><button class="boder-1 border-white bg-black text-white font-semibold p-2 ">Submit</button><button class="ml-2 boder-1 border-white bg-black text-white font-semibold p-2">Cancel</button>
+              </div>
+              </form>
+     </section><br>
+     <!-- footer -->
+      <footer class="h-[150px]  bg-blue-900 flex items-center justify-center">
+        <h1 class="text-[29px] text-center w-full font-bold text-white">WebPage is Crafted by Gokul A N</h1>
+      </footer>
+  </body>
+</html>
