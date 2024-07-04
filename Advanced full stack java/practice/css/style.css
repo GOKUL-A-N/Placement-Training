@@ -56,3 +56,17 @@ body {
     padding: 10px;
     font-weight: bolder;
   }
+
+ 
+
+  @media only screen and (min-width: 375px){
+    h1{
+      color:aqua;
+    }
+  }
+  @media only screen and (min-width: 775px){
+    h1{
+      color:rgb(214, 107, 6);
+    }
+  }
+

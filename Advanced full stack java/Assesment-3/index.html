@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Practice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="w-full bg-[#111] flex flex-col items-center justify-center p-3"
+  >
+    <h1 class="p-1 font-bold text-white text-[28px]">
+      Student <span class="text-green-400">Form</span>
+    </h1>
+    <form
+      action=""
+      class=" p-10 text-white font-semibold text-[20px]"
+    >
+      <div class="mb-5">
+        <label for="rollno">Roll No</label><br />
+        <input
+          type="text"
+          placeholder="Roll No"
+          class="border-2 focus:outline-blue-400 w-[300px] mt-3 p-1 focus:border-green-400 border-green-400 bg-black"
+          required
+        /><br />
+      </div>
+      <div class="mb-5">
+        <label for="rollno">Name</label><br />
+        <input
+          type="text"
+          placeholder="Name"
+          class="border-2 focus:outline-blue-400 mt-3 p-1 w-[300px] focus:border-green-400 border-green-400 bg-black"
+          required
+        /><br />
+      </div>
+      <div class="mb-5">
+        <label for="rollno">10th Mark</label><br />
+        <input
+          type="text"
+          placeholder="10th Mark"
+          class="border-2 focus:outline-blue-400 w-[300px] mt-3 p-1 focus:border-green-400 border-green-400 bg-black"
+          required
+        /><br />
+      </div>
+      <div class="mb-5">
+        <label for="rollno">12th Mark</label><br />
+        <input
+          type="text"
+          placeholder="12th Mark"
+          class="border-2 focus:outline-blue-400 w-[300px] mt-3 p-1 focus:border-green-400 border-green-400 bg-black"
+          required
+        /><br />
+      </div>
+      <div class="mb-5">
+        <label for="rollno">CGPA</label><br />
+        <input
+          type="text"
+          placeholder="CGPA"
+          class="border-2 focus:outline-blue-400 w-[300px] mt-3 p-1 focus:border-green-400 border-green-400 bg-black"
+          required
+        /><br />
+      </div>
+      <div class="mb-5">
+        <label for="rollno">Department : </label>
+        <select name="" id="" class="bg-black text-white Capitalize bprder-2 border-green-400">
+            <option value="Automobile">Automobile</option>
+            <option value="Aero">Aero</option>
+            <option value="Cse">Cse</option>
+            <option value="It">It</option>
+            <option value="Aiml">Aiml</option>
+            <option value="Civil">Civil</option>
+            <option value="Mechanical">Mechanical</option>
+        </select>
+        <br />
+        <div class="mt-4">
+            <button class="pl-2 pr-2 pt-1 pb-1 border-2 rounded-md bg-green-400 text-black font-semibold border-black hover:bg-[#111] hover:text-green-400 hover:border-green-400">Submit</button>
+            <button class="pl-2 pr-2 pt-1 pb-1 border-2 rounded-md bg-black border-2 border-green-400  text-green-400 hover:bg-green-400 hover:text-[#111]">Cancel</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
